@@ -11,8 +11,8 @@ import jakarta.validation.constraints.NotNull;
  * @author Valentino Solis
  */
 @Embeddable
-public record DateRange(@NotNull LocalDateTime startDate,
-    @NotNull LocalDateTime endDate) {
+public record DateRange(@NotNull(message = "The start date is required") LocalDateTime startDate,
+    @NotNull(message = "The end date is required") LocalDateTime endDate) {
 
   public DateRange {
     if (startDate.isAfter(endDate))
