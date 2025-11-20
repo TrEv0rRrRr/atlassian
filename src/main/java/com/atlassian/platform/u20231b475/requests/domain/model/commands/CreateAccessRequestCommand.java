@@ -11,6 +11,6 @@ import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.Syst
  * @author Valentino Solis
  */
 public record CreateAccessRequestCommand(Long employeeId, SystemName requestedSystem, AccessLevel accessLevel,
-        String justification, LocalDateTime startDate,
-        LocalDateTime endDate) {
+    String justification, LocalDateTime startDate,
+    LocalDateTime endDate) {
 }
