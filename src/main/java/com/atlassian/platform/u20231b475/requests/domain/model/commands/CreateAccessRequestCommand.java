@@ -3,7 +3,6 @@ package com.atlassian.platform.u20231b475.requests.domain.model.commands;
 import java.time.LocalDateTime;
 
 import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.AccessLevel;
-import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.Justification;
 import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.SystemName;
 
 /**
@@ -12,6 +11,6 @@ import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.Syst
  * @author Valentino Solis
  */
 public record CreateAccessRequestCommand(Long employeeId, SystemName requestedSystem, AccessLevel accessLevel,
-    Justification justification, LocalDateTime startDate,
-    LocalDateTime endDate) {
+        String justification, LocalDateTime startDate,
+        LocalDateTime endDate) {
 }
