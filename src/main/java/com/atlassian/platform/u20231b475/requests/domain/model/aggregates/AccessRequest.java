@@ -9,6 +9,7 @@ import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.Empl
 import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.Justification;
 import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.RequestStatus;
 import com.atlassian.platform.u20231b475.requests.domain.model.valueobjects.SystemName;
+import com.atlassian.platform.u20231b475.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -20,7 +21,7 @@ import lombok.Getter;
  */
 @Entity
 @Getter
-public class AccessRequest {
+public class AccessRequest extends AuditableAbstractAggregateRoot<AccessRequest> {
   private LocalDateTime requestedAt;
 
   @Embedded
